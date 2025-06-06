@@ -13,15 +13,22 @@
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
           <div class="flex items-center">
-            <img src="/images/logo.png" alt="Misunderstood Natural Hair Gallery Logo" class="h-8 w-auto">
+            <img src="images/logo.png" alt="Misunderstood Natural Hair Gallery Logo" class="h-8 w-auto">
             <span style="font-family: 'Dancing Script', cursive;" class="text-2xl ml-3 text-white hidden sm:inline">Misunderstood Natural Hair</span>
             <span style="font-family: 'Dancing Script', cursive;" class="text-sm ml-2 text-white sm:hidden">Misunderstood Natural Hair</span>
           </div>
 
           <!-- Mobile menu button -->
-          <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="mobile-menu-button" class="md:hidden focus:outline-none" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <!-- Scroll to top button -->
+          <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-purple-700 transition-all duration-300 hover:scale-110 opacity-0 pointer-events-none" aria-label="Scroll to top">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
             </svg>
           </button>
 
@@ -50,7 +57,7 @@
       </div>
     </nav>
 
-    <section id="home" class="min-h-screen pt-20 flex items-center justify-center bg-[url('/images/hair_braid-15.jpg')] bg-cover bg-center relative">
+    <section id="home" class="min-h-screen pt-20 flex items-center justify-center bg-[url('images/hair_braid-15.jpg')] bg-cover bg-center relative">
   <div class="absolute inset-0 bg-gradient-to-r from-purple-600/80 to-pink-500/80"></div>
       <div class="container mx-auto px-4 text-center relative z-10">
         <h1 class="text-5xl font-bold text-white mb-4">Expert Natural Hair Care in Chicago</h1>
@@ -167,71 +174,61 @@
       </div>
     </section>
 
-    <section id="team" class="py-20 relative">
-      <div class="absolute inset-0 bg-gradient-to-r from-purple-600/80 to-pink-500/80"></div>
+    <section id="team" class="py-20 relative bg-gradient-to-r from-purple-600/80 to-pink-500/80">
+      <div class="absolute inset-0 bg-white/30 backdrop-blur-sm"></div>
       <div class="container mx-auto px-4 relative z-10">
         <h2 class="text-4xl font-bold text-center mb-12 text-white">Meet Our Team</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="flex flex-col items-center">
               <div class="w-[400px] h-[267px] rounded-lg overflow-hidden mb-8 shadow-2xl shadow-black/30">
-                <img src="/images/hair_braid-19.jpg" alt="Malik Johnson" class="w-full h-full object-cover">
+                <img src="images/hair_braid-19.jpg" alt="Ansa Ofey - Natural Hairstylist" class="w-full h-full object-cover">
               </div>
-              <div class="bg-gray-50 rounded-lg p-8 shadow-xl relative overflow-hidden w-full">
-                <div class="absolute inset-0 z-0 bg-pink-200/30">
-                  <img src="/images/hair_braid-19.jpg" alt="Stylist background" class="w-full h-full object-cover opacity-20">
+              <div class="bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-xl relative overflow-hidden w-full border border-white/20">
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-semibold mb-4 text-gray-800">Ansa "Twist King" Ofey</h3>
+                  <p class="text-purple-600 font-medium mb-2">Natural Hairstyling</p>
+                  <p class="text-gray-600">Ansa Ofey crafts flawless braids, twists, and protective styles with precision and passion, helping you express your natural beauty with confidence.</p>
                 </div>
-              <div class="relative z-10">
-                <h3 class="text-2xl font-semibold mb-4">Ansa "Twist King" Ofey</h3>
-                <p class="text-gray-600 mb-2">Natural Hairstyling</p>
-                <p class="text-gray-600">Ansa Ofey crafts flawless braids, twists, and protective styles with precision and passion, helping you express your natural beauty with confidence.</p>
               </div>
-            </div>
           </div>
             <div class="flex flex-col items-center">
               <div class="w-[400px] h-[267px] rounded-lg overflow-hidden mb-8 shadow-2xl shadow-black/30">
-                <img src="/images/hair_braid-22.jpg" alt="Devon Brooks" class="w-full h-full object-cover">
+                <img src="images/hair_braid-22.jpg" alt="Jasmine Williams - Natural Hair Specialist" class="w-full h-full object-cover">
               </div>
-              <div class="bg-gray-50 rounded-lg p-8 shadow-xl relative overflow-hidden w-full">
-                <div class="absolute inset-0 z-0 bg-pink-200/30">
-                  <img src="/images/hair_braid-22.jpg" alt="Stylist background" class="w-full h-full object-cover opacity-20">
+              <div class="bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-xl relative overflow-hidden w-full border border-white/20">
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-semibold mb-4 text-gray-800">Jasmine Williams</h3>
+                  <p class="text-purple-600 font-medium mb-2">Natural Hair Specialist</p>
+                  <p class="text-gray-600">Jasmine is passionate about helping clients embrace their natural texture, offering expert advice on curl definition, moisture retention, and healthy hair practices.</p>
                 </div>
-              <div class="relative z-10">
-                <h3 class="text-2xl font-semibold mb-4">Deena "Jasmine "Style Queen" Williams</h3>
-                <p class="text-gray-600 mb-2">Natural Hair Color Specialist</p>
-                <p class="text-gray-600">Jasmine brings vibrant life to natural hair with her expert color techniques, creating stunning transformations while maintaining hair health and vitality.</p>
               </div>
-            </div>
           </div>
             <div class="flex flex-col items-center">
               <div class="w-[400px] h-[267px] rounded-lg overflow-hidden mb-8 shadow-2xl shadow-black/30">
-                <img src="/images/hair_braid-26.jpg" alt="Treyvon Carter" class="w-full h-full object-cover">
+                <img src="images/hair_braid-26.jpg" alt="Tyrone Brown - Barber & Fade Specialist" class="w-full h-full object-cover">
               </div>
-              <div class="bg-gray-50 rounded-lg p-8 shadow-xl relative overflow-hidden w-full">
-                <div class="absolute inset-0 z-0 bg-pink-200/30">
-                  <img src="/images/hair_braid-26.jpg" alt="Stylist background" class="w-full h-full object-cover opacity-20">
+              <div class="bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-xl relative overflow-hidden w-full border border-white/20">
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-semibold mb-4 text-gray-800">Tyrone Brown</h3>
+                  <p class="text-purple-600 font-medium mb-2">Barber & Fade Specialist</p>
+                  <p class="text-gray-600">Tyrone brings precision and artistry to every cut, specializing in fades, tapers, and modern men's styles that complement natural hair textures.</p>
                 </div>
-              <div class="relative z-10">
-                <h3 class="text-2xl font-semibold mb-4">Treyvon "Blendz" Carter</h3>
-                <p class="text-gray-600 mb-2">Hair Extensions</p>
-                <p class="text-gray-600">Treyvon masters seamless installs—from volume to drama—customizing every extension to match your texture, movement, and bold personal style.</p>
               </div>
-            </div>
           </div>
             <div class="flex flex-col items-center">
               <div class="w-[400px] h-[267px] rounded-lg overflow-hidden mb-8 shadow-2xl shadow-black/30">
-                <img src="/images/hair_braid-20.jpg" alt="Jasmine Williams" class="w-full h-full object-cover">
+                <img src="images/hair_braid-20.jpg" alt="Deena Brooks - Loc Specialist" class="w-full h-full object-cover">
               </div>
-              <div class="bg-gray-50 rounded-lg p-8 shadow-xl relative overflow-hidden w-full">
-                <div class="absolute inset-0 z-0 bg-pink-200/30">
-                  <img src="/images/hair_braid-20.jpg" alt="Stylist background" class="w-full h-full object-cover opacity-20">
+              <div class="bg-white/90 backdrop-blur-sm rounded-lg p-8 shadow-xl relative overflow-hidden w-full border border-white/20">
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-semibold mb-4 text-gray-800">Deena "Loc Queen" Brooks</h3>
+                  <p class="text-purple-600 font-medium mb-2">Loc Maintenance & Styling</p>
+                  <p class="text-gray-600">Deena keeps your locs fresh and flourishing, combining expert retwisting techniques with deep treatments and creative styling tailored to your unique style.</p>
                 </div>
-              <div class="relative z-10">
-                <h3 class="text-2xl font-semibold mb-4">Loc Queen" Brooks</h3>
-                <p class="text-gray-600 mb-2">Loc Maintenance & Styling</p>
-                <p class="text-gray-600">Deena keeps your locs fresh and flourishing, combining expert retwisting techniques with deep treatments and creative styling tailored to your unique style.</p>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </section>
 
@@ -271,8 +268,8 @@
               <div class="bg-white rounded-lg p-4 max-w-4xl w-full mx-4">
                 <div class="flex justify-between items-center mb-4">
                   <h3 class="text-xl font-bold">Schedule Your Appointment</h3>
-                  <button onclick="closeBookingModal()" class="text-gray-500 hover:text-gray-700">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <button onclick="closeBookingModal()" class="text-gray-500 hover:text-gray-700" aria-label="Close booking modal">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                   </button>

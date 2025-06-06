@@ -1,8 +1,19 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{html,js}", "./public/**/*.{html,js}"],
+  content: [
+    "./pages/**/*.{html,js}",
+    "./public/**/*.{html,js}",
+    "./index.html"
+  ],
   theme: {
-    extend: {},
-  }
+    extend: {
+      colors: {
+        // Ensure background colors are explicitly defined
+        'white': '#ffffff',
+        'black': '#000000',
+      },
+    },
+  },
+  plugins: [],
 }

@@ -185,15 +185,37 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Scroll to top functionality
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+  function toggleScrollToTop() {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.opacity = '1';
+      scrollToTopBtn.style.pointerEvents = 'auto';
+    } else {
+      scrollToTopBtn.style.opacity = '0';
+      scrollToTopBtn.style.pointerEvents = 'none';
+    }
+  }
+
+  window.addEventListener('scroll', toggleScrollToTop);
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Modal functionality
+  function openBookingModal() {
+    document.getElementById('bookingModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBookingModal() {
+    const modal = document.getElementById('bookingModal');
+    if (modal) modal.classList.add('hidden');
+  }
 });
-
-// Modal functionality
-function openBookingModal() {
-  const modal = document.getElementById('bookingModal');
-  if (modal) modal.classList.remove('hidden');
-}
-
-function closeBookingModal() {
-  const modal = document.getElementById('bookingModal');
-  if (modal) modal.classList.add('hidden');
-}
