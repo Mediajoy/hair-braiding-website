@@ -1,0 +1,24 @@
+{
+  "name": "hair-braiding-site",
+  "version": "1.0.0",
+  "description": "Hair Braiding Salon Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./input.css -o ./public/out.css --minify",
+    "dev": "node index.js",
+    "start": "npm run build && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "node-fetch": "^3.2.6",
+    "tailwindcss": "^3.1.8",
+    "daisyui": "^5.0.35"
+  }
+}
